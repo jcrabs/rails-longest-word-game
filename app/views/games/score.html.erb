@@ -1,0 +1,11 @@
+<h1>Result</h1>
+<p>
+  <% if @message == :congrats %>
+    <strong>Congratulations!</strong> <%= @answer %> is a valid English word!
+  <% elsif @message == :not_valid %>
+    Sorry but <strong><%= @answer %></strong> does not seem to be a valid English word...
+  <% elsif @message == :not_built %>
+    Sorry but <strong><%= @answer %></strong> can't be built out of <%= @letters %>
+  <% end %>
+</p>
+<%= link_to "Play again", new_path %>
